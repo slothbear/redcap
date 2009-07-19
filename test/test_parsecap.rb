@@ -5,6 +5,7 @@
 
 
 require 'test/unit'
+# can I use require relative??
 require '../lib/redcap/uploader'
 
 class TestParseCap < Test::Unit::TestCase
