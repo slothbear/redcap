@@ -26,3 +26,5 @@ class TestParseCap < Test::Unit::TestCase
   
   
 end
+
+# squeak
