@@ -1,7 +1,36 @@
 = redcap
 
-Description goes here.
+redcap is a library for uploading images
+to Second Life.  It costs L$10 per image uploaded.
+You can save some money during testing by using the
+Preview Grid (if available).
 
-== Copyright
+== installation
 
-Copyright (c) 2009 Paul Morganthall. See LICENSE for details.
+To install redcap as a gem, you'll find it on github:
+   gem install slothbear-redcap --source http://gems.github.com
+
+If you'd rather just grab a couple files and give it a try, download
+the following files from http://github.com/slothbear/redcap/tree/master
+   bin/redcap
+   lib/redcap/uploader.rb
+
+Amend this line in redcap to fit your installation and give it a try.
+   require "redcap/uploader"
+
+== usage
+
+redcap your_image.jpg first_name last_name SL_password
+
+== release notes
+
+None of the tests run at this time.
+To make sure your ImageMagick can produce SL-compatible JPEG-2000 files,
+issue the following command:
+   identify -list format | grep JPC
+The JPC line should indicate it can write files, like:
+[TODO]
+
+== copyright
+
+Copyright 2009  Paul Morganthall. See file LICENSE for details.
