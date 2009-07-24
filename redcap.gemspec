@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8")
   s.rubygems_version = %q{1.3.1}
-  s.summary = %q{Utilities for uploading images to Second Life}
+  s.summary = %q{Utilities for uploading files to Second Life}
   s.test_files = [
     "test/redcap_test.rb",
      "test/test_helper.rb",
