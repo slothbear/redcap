@@ -9,7 +9,7 @@ begin
     gem.email    = "slothbear@constella.org"
     gem.homepage = "http://adammarker.org/redcap"
     gem.authors  = ["Paul Morganthall"]
-    gem.platform = Gem::Platform::Ruby
+    # gem.platform = Gem::Platform::Ruby
     gem.has_rdoc = false
     gem.required_ruby_version = '>=1.8'
 
