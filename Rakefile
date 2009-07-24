@@ -12,7 +12,8 @@ begin
     # gem.platform = Gem::Platform::Ruby
     gem.has_rdoc = false
     gem.required_ruby_version = '>=1.8'
-
+    gem.add_dependency('builder')
+    
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 
