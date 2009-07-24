@@ -4,11 +4,15 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "redcap"
-    gem.summary = %Q{TODO}
-    gem.email = "slothbear@constella.org"
-    gem.homepage = "http://github.com/slothbear/redcap"
-    gem.authors = ["Paul Morganthall"]
+    gem.name     = "redcap"
+    gem.summary  = %Q{Utilities for uploading images to Second Life}
+    gem.email    = "slothbear@constella.org"
+    gem.homepage = "http://adammarker.org/redcap"
+    gem.authors  = ["Paul Morganthall"]
+    gem.platform = Gem::Platform::Ruby
+    gem.has_rdoc = false
+    gem.required_ruby_version = '>=1.8'
+
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 

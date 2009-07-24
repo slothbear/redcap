@@ -20,16 +20,40 @@ Amend this line in redcap to fit your installation and give it a try.
 
 == usage
 
-redcap your_image.jpg first_name last_name SL_password
+Upload a JPG:
+    redcap your_image.jpg first_name last_name SL_password
+
+Upload a PNG to the preview grid:
+    redcap -g preview picture.png first_name last_name SL_password
+
+Upload an image from the web:
+    redcap http://
+
+Note you can upload any image format that your installation of ImageMagick
+can read.
 
 == release notes
+All images are uploaded into the top level of your Inventory. [to be
+fixed for release 1.0.0]
 
-None of the tests run at this time.
+Second Life requires the uploaded image dimensions to be powers of 2.  If you'd
+like to re-size your image to its original aspect ratio, make use of
+Uploader::aspect_ratio.  (see forthcoming LSL example)
+
+installing ImageMagick and RMagick:
+  http://rmagick.rubyforge.org/install-osx.html
+
+When you install ImageMagick, make sure you include the jpeg2 variant:
+    sudo port install tiff -macosx imagemagick +q8 +gs +wmf +jpeg2
+
 To make sure your ImageMagick can produce SL-compatible JPEG-2000 files,
 issue the following command:
    identify -list format | grep JPC
-The JPC line should indicate it can write files, like:
-[TODO]
+The JPC line should include "rw-" indicating it can write files, like:
+    JPC* JPC       rw-   JPEG-2000 Code Stream Syntax
+
+The /tests were developed for a previous release and do not run at this time.
+
 
 == copyright
 

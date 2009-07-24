@@ -1,0 +1,84 @@
+#!/usr/bin/env ruby
+
+# redcap -- library for uploading files to Second Life
+# Copyright 2009  Paul Morganthall
+# 
+# redcap is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# require 'redcap/uploader'
+require '../lib/redcap/uploader'
+require 'getoptlong'
+
+synopsis = %{# == Synopsis
+#
+# redcap: upload image to Second Life
+#         using the specified AV credentials.
+#
+# == Usage
+#
+# redcap [OPTIONS] [first_name last_name password] image_file
+#
+# --help, -h:
+#    show help
+#
+# --grid grid, -g grid:
+#    upload image to the specified grid, default = main
+#    other legal value:  preview
+#
+# first_name, last_name, password:
+#    Second Life credentials used to login.
+#
+# image_file: path to the image file to be uploaded
+}
+
+grid = 'main'
+
+opts = GetoptLong.new(
+  [ '--help', '-h', GetoptLong::NO_ARGUMENT ],
+  [ '--grid', '-g', GetoptLong::REQUIRED_ARGUMENT ]
+  )
+
+opts.each do |opt, arg|
+  case opt
+    when '--help'
+      puts synopsis
+      exit
+    when '--grid'
+      grid = arg
+  end
+end
+
+case ARGV.size
+when 4
+  first_name, last_name, password, image_file = ARGV
+else
+  puts "missing arguments (try --help)"
+  exit
+end
+
+unless image_file =~ /^http/ or File.exists?(image_file)
+  puts "file not found: #{image_file}"
+  exit
+end
+
+uploader = Redcap::Uploader.new(first_name, last_name, password, image_file, grid)
+
+
+# on successful upload, prepend the original image aspect ratio.
+if uploader.success
+  puts "file successfully uploaded, UUID=#{uploader.new_asset_id}"
+  puts "original aspect ratio: #{sprintf("%.4f", uploader.aspect_ratio)}"
+else
+  puts "error encountered while uploading:\n#{uploader.msg}"
+end
