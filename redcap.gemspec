@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "bin/redcap",
      "doc/placeholder",
      "lib/redcap/uploader.rb",
+     "redcap.gemspec",
      "test/redcap_image.jpc",
      "test/redcap_test.rb",
      "test/synapse.jpg",
