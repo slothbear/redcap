@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name     = "redcap"
-    gem.summary  = %Q{Utilities for uploading images to Second Life}
+    gem.summary  = %Q{Utilities for uploading files to Second Life}
     gem.email    = "slothbear@constella.org"
     gem.homepage = "http://adammarker.org/redcap"
     gem.authors  = ["Paul Morganthall"]

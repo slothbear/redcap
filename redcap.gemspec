@@ -2,13 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{redcap}
-  s.version = "0.7.0"
+  s.version = "0.7.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Morganthall"]
-  s.date = %q{2009-07-23}
+  s.date = %q{2009-07-24}
+  s.default_executable = %q{redcap}
   s.email = %q{slothbear@constella.org}
-  s.executables = ["redcap", "redcap.log"]
+  s.executables = ["redcap"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -19,7 +20,7 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "Rakefile",
-     "VERSION",
+     "VERSION.yml",
      "bin/redcap",
      "doc/placeholder",
      "lib/redcap/uploader.rb",
