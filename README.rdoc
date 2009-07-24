@@ -7,10 +7,10 @@ Preview Grid (if available).
 
 == installation
 
-To install redcap as a gem, you'll find it on github:
+To install redcap as a gem:
    gem install slothbear-redcap --source http://gems.github.com
 
-If you'd rather just grab a couple files and give it a try, download
+If you'd rather grab a couple files and give it a try, download
 the following files from http://github.com/slothbear/redcap/tree/master
    bin/redcap
    lib/redcap/uploader.rb
@@ -26,9 +26,6 @@ Upload a JPG:
 Upload a PNG to the preview grid:
     redcap -g preview picture.png first_name last_name SL_password
 
-Upload an image from the web:
-    redcap http://
-
 Note you can upload any image format that your installation of ImageMagick
 can read.
 
@@ -40,8 +37,7 @@ Second Life requires the uploaded image dimensions to be powers of 2.  If you'd
 like to re-size your image to its original aspect ratio, make use of
 Uploader::aspect_ratio.  (see forthcoming LSL example)
 
-installing ImageMagick and RMagick:
-  http://rmagick.rubyforge.org/install-osx.html
+installing ImageMagick and RMagick: http://rmagick.rubyforge.org/install-osx.html
 
 When you install ImageMagick, make sure you include the jpeg2 variant:
     sudo port install tiff -macosx imagemagick +q8 +gs +wmf +jpeg2
