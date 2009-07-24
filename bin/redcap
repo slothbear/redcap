@@ -26,7 +26,7 @@ synopsis = %{# == Synopsis
 #
 # == Usage
 #
-# redcap [OPTIONS] [first_name last_name password] image_file
+# redcap [OPTIONS] first_name last_name password image_file
 #
 # --help, -h:
 #    show help
@@ -62,7 +62,8 @@ case ARGV.size
 when 4
   first_name, last_name, password, image_file = ARGV
 else
-  puts "missing arguments (try --help)"
+  puts "usage: redcap first_name, last_name, password, image_file"
+  puts "       redcap --help"
   exit
 end
 

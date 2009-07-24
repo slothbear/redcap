@@ -21,10 +21,10 @@ Amend this line in redcap to fit your installation and give it a try.
 == usage
 
 Upload a JPG:
-    redcap your_image.jpg first_name last_name SL_password
+    redcap first_name last_name SL_password your_image.jpg
 
 Upload a PNG to the preview grid:
-    redcap -g preview picture.png first_name last_name SL_password
+    redcap -g preview first_name last_name SL_password picture.png
 
 Note you can upload any image format that your installation of ImageMagick
 can read.
