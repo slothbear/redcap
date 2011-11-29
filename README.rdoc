@@ -39,6 +39,8 @@ Uploader::aspect_ratio.  (see forthcoming LSL example)
 
 installing ImageMagick and RMagick: http://rmagick.rubyforge.org/install-osx.html
 
+[This ImageMagick installation information is very old. I'm looking for better info.]
+
 When you install ImageMagick, make sure you include the jpeg2 variant:
     sudo port install tiff -macosx imagemagick +q8 +gs +wmf +jpeg2
 
