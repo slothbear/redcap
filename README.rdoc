@@ -38,8 +38,8 @@ Uploader::aspect_ratio.
 
 == Installing ImageMagick and RMagick on Mac OS X
 
-brew install imagemagick
-gem install rmagick
+    brew install imagemagick
+    gem install rmagick
 
 Make sure your ImageMagick can produce SL-compatible JPEG-2000 files:
    identify -list format | grep JPC
