@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Redcap by slothbear</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Redcap</h1>
+        <p class="header">Utilities for uploading files to Second Life</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/slothbear/redcap/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/slothbear/redcap/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/slothbear/redcap">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/slothbear">slothbear</a></p>
+
+
+      </header>
+      <section>
+        <h1>redcap</h1>
+
+<p>redcap is a library for uploading images
+to Second Life.  It costs L$10 per image uploaded.
+You can save some money during testing by using the
+Preview Grid (if available).</p>
+
+<h1>installation</h1>
+
+<p>To install redcap as a gem:
+   gem install slothbear-redcap --source <a href="http://gems.github.com">http://gems.github.com</a></p>
+
+<p>If you'd rather grab a couple files and give it a try, download
+the following files from <a href="http://github.com/slothbear/redcap/tree/master">http://github.com/slothbear/redcap/tree/master</a>
+   bin/redcap
+   lib/redcap/uploader.rb</p>
+
+<p>Amend this line in redcap to fit your installation and give it a try.
+   require "redcap/uploader"</p>
+
+<h1>usage</h1>
+
+<p>Upload a JPG:
+    redcap first_name last_name SL_password your_image.jpg</p>
+
+<p>Upload a PNG to the preview grid:
+    redcap -g preview first_name last_name SL_password picture.png</p>
+
+<p>Note you can upload any image format that your installation of ImageMagick
+can read.</p>
+
+<h1>release notes</h1>
+
+<p>All images are uploaded into the top level of your Inventory.</p>
+
+<p>Second Life requires the uploaded image dimensions to be powers of 2.  If you'd
+like to re-size your image to its original aspect ratio, make use of
+Uploader::aspect_ratio.</p>
+
+<h1>Installing ImageMagick and RMagick on Mac OS X</h1>
+
+<pre><code>brew install imagemagick
+gem install rmagick
+</code></pre>
+
+<p>Make sure your ImageMagick can produce SL-compatible JPEG-2000 files:
+   identify -list format | grep JPC
+The JPC line should include "rw-" indicating it can write files, like:
+    JPC* JPC       rw-   JPEG-2000 Code Stream Syntax</p>
+
+<p>The /tests were developed for a previous release and do not run at this time.</p>
+
+<h1>copyright</h1>
+
+<p>redcap -- library for uploading files to Second Life
+Copyright 2011  Paul Morganthall</p>
+
+<p>redcap is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
