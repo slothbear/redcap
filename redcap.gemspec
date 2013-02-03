@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ["Paul Morganthall"]
   s.date = %q{2009-07-24}
   s.default_executable = %q{redcap}
-  s.email = %q{slothbear@constella.org}
+  s.email = %q{slothbear@morganthall.com}
   s.executables = ["redcap"]
   s.extra_rdoc_files = [
     "LICENSE",
